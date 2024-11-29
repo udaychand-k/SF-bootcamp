@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="UserName">
+        <div class="slds-var-p-around_medium">
+        Hello {username}
+        <lightning-input label="Enter your alias name" value={username} onchange={handleChange}>
+        </lightning-input>
+    </div>
+    <div class="slds-var-p-around_medium">
+        <c-day-two alias={usernamealias} onupdateusername={handleupdateUsername}>day two</c-day-two>
+    </div>
+    </lightning-card>
+</template>
