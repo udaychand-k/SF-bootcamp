@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Alias Name">
+        <div class="slds-var-p-around_medium">
+            <lightning-input  checked type="checkbox-button" label="Alias?" value={isalias} onchange={handleChange}></lightning-input>
+        </div>
+    </lightning-card>
+    <template if:true={isalias}>
+        <div class="slds-var-p-around_medium"   >
+            {user}
+        </div>
+    </template>
+    <template if:false={isalias}>
+        <div class="slds-var-p-around_medium"   >
+            {user}
+        </div>
+    </template>
+    <lightning-card title="Products list">
+        <lightning-accordion allow-multiple-sections-open active-section-name="garlic">
+            
+                    <template for:each={productList} for:item="product">
+                        <lightning-accordion-section label={product.name} name={product.name} key={product}>
+                            This is section briefs about  benifits of <b>{product.name}</b>
+                        <template for:each={product.details} for:item="p">
+                            <h1 key={p}>Hey
+                            <lightning-tile  >
+                                {p}
+                            </lightning-tile>
+                        </h1>
+                        </template>
+                </lightning-accordion-section>
+            </template>
+            
+            
+        </lightning-accordion>
+    </lightning-card>
+</template>
