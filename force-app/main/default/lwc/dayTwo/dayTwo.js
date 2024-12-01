@@ -5,7 +5,9 @@ export default class DayTwo extends LightningElement {
     updateusername;
     @api products;
     @api addProduct;
+    @api removeProduct;
     inputValue;
+    r;
     // handleChangeinput(event){
     //     this.inputValue=event.target.value;
     // }
@@ -23,6 +25,11 @@ export default class DayTwo extends LightningElement {
         }
         this.refs.myinput.value='';
 
+    }
+    handleRemove(event){
+        this.r=event.target.label;
+        this.removeProduct(this.r);
+        
     }
     handleChange(event){
         let e=new CustomEvent(

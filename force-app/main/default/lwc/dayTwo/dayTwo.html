@@ -3,9 +3,10 @@
     <lightning-input label = "Enter Updated Username" onchange = "{handleChange}"></lightning-input>
     <lightning-card title="products">
         <template for:each={products} for:item="i">
-            <div key={i}>
-                {i.label} - {i.value}
-            </div>
+            <span class="slds-var-m-right_small" key={i}>
+                <lightning-pill label={i.label}  onremove={handleRemove}></lightning-pill> 
+                
+            </span>
         </template>
         <lightning-input name="myinput" label="Add Product" lwc:ref="myinput" ></lightning-input>
         <lightning-button name="my-button" label="Add" onclick={handleClick}></lightning-button>
