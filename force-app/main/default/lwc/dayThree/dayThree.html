@@ -3,7 +3,7 @@
         <div class="slds-var-p-around_medium">
             <lightning-input  checked type="checkbox-button" label="Alias?" value={isalias} onchange={handleChange}></lightning-input>
         </div>
-    </lightning-card>
+    
     <template if:true={isalias}>
         <div class="slds-var-p-around_medium"   >
             {user}
@@ -14,6 +14,7 @@
             {user}
         </div>
     </template>
+</lightning-card>
     <lightning-card title="Products list">
         <lightning-accordion allow-multiple-sections-open active-section-name="garlic">
             

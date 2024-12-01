@@ -1,4 +1,13 @@
 <template>
     <B>Your alias name is - {alias}</B>
     <lightning-input label = "Enter Updated Username" onchange = "{handleChange}"></lightning-input>
+    <lightning-card title="products">
+        <template for:each={products} for:item="i">
+            <div key={i}>
+                {i.label} - {i.value}
+            </div>
+        </template>
+        <lightning-input name="myinput" label="Add Product" lwc:ref="myinput" ></lightning-input>
+        <lightning-button name="my-button" label="Add" onclick={handleClick}></lightning-button>
+    </lightning-card>
 </template>

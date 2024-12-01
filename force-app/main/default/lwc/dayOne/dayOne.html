@@ -6,7 +6,17 @@
         </lightning-input>
     </div>
     <div class="slds-var-p-around_medium">
-        <c-day-two alias={usernamealias} onupdateusername={handleupdateUsername}>day two</c-day-two>
+        <c-day-two lwc:spread={data} alias={usernamealias} onupdateusername={handleupdateUsername}>day two</c-day-two>
+    </div>
+    <div class="slds-var-p-around_medium">
+        <lightning-combobox options={products}
+                            placeholder="select the product"
+                            label="Products"
+                            value={value}
+                            name="combobox"
+                            onchange={handleChangeCombobox}
+                            >
+                        </lightning-combobox>
     </div>
     </lightning-card>
 </template>
