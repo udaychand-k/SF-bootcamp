@@ -1,7 +1,8 @@
 <template>
-    <B>Your alias name is - {alias}</B>
+    <lightning-card class="udaychand" title="products">
+    <B> Your alias name is - {alias}</B>
     <lightning-input label = "Enter Updated Username" onchange = "{handleChange}"></lightning-input>
-    <lightning-card title="products">
+    
         <template for:each={products} for:item="i">
             <span class="slds-var-m-right_small" key={i}>
                 <lightning-pill label={i.label}  onremove={handleRemove}></lightning-pill> 

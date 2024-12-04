@@ -1,8 +1,9 @@
 import { LightningElement, track } from 'lwc';
 
 export default class DayOne extends LightningElement {
-    username='udaychand';
+    username='Udaychand';
     usernamealias;
+    percent=10;
     
      products=[
         {label:'bike',value:'bike'},
@@ -31,5 +32,22 @@ handleChangeCombobox(event){
     }
     handleupdateUsername(event){
         this.username=event.detail.updateusernametonewname;
+    }
+    handleKeyup(event){
+        this.percent=event.target.value;
+    }
+    get width(){
+        return `width:${this.percent}%`;
+    }
+    renderedCallback(){
+        const style = document.createElement('style');
+        style.innerText=`c-day-one .uday .slds-form-element__label
+        {
+        background-color: var(--lwc-colorBackground);
+        color: tomato;
+        }`;
+        let v = this.template.querySelector('.uday');
+        console.log('**************'+v);
+        v.appendChild(style);
     }
 }

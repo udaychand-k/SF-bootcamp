@@ -1,8 +1,14 @@
 <template>
+    <div>
     <lightning-card title="UserName">
         <div class="slds-var-p-around_medium">
+            <lightning-input label="Enter percentage" type="number" value={percent} onchange={handleKeyup}>
+            </lightning-input>
+            <div style={width} class="greener">progress bar</div>
+        </div>
+        <div style="color: green;" class="slds-var-p-around_medium">
         Hello {username}
-        <lightning-input label="Enter your alias name" value={username} onchange={handleChange}>
+        <lightning-input class="uday" label="Enter your alias name" value={username} onchange={handleChange}>
         </lightning-input>
     </div>
     <div class="slds-var-p-around_medium">
@@ -19,4 +25,5 @@
                         </lightning-combobox>
     </div>
     </lightning-card>
+</div>
 </template>

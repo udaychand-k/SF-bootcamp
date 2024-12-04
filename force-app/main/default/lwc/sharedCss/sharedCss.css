@@ -1,0 +1,10 @@
+div{
+    font-family: mygooglefonts;
+    background-color: grey;
+    color: brown;
+}
+
+@font-face {
+    font-family: mygooglefonts;
+    src: url(/resource/googlefonts/Pacifico-Regular.ttf);
+}
