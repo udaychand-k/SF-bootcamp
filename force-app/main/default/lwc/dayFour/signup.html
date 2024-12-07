@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Signup">
+        <lightning-input label="Enter your userName" variant="neutral" type="text">
+        </lightning-input>
+        <lightning-input label="Enter your Email" type="email">
+        </lightning-input>
+        <span>
+        <lightning-button class="slds-var-m-left_small" variant="neutral" label="Back" onclick={handleclick}></lightning-button>
+        <lightning-button class="slds-var-m-left_small" variant="brand" label="submit" onclick={handleSubmit}></lightning-button>
+    </span>
+    <lightning-button  class="slds-var-m-left_small" label="sign in" onclick={handleclick}></lightning-button>
+    </lightning-card>
+</template>

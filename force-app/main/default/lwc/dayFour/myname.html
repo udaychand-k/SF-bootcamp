@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Record and Object">
+        <div class="slds-var-p-around_medium">
+            {rec} --- {objName} -- {uid}
+        </div>
+    </lightning-card>
+    <lightning-card title="Authentication">
+        <lightning-button class="slds-var-m-left_small" label="sign up" onclick={handleclick}></lightning-button>
+        <lightning-button class="slds-var-m-left_small" label="sign in" onclick={handleclick}></lightning-button>
+        <template if:true={isRegistration}>
+            
+        </template>
+        <template if:true={isLogin} >
+            
+        </template>
+    </lightning-card>
+</template>
